@@ -21,9 +21,9 @@ blastn -db arb_database.db -query otus.fasta -outfmt '6' -max_target_seqs 2000 -
 
 
 5.) Generate ARB macro to design probes for each OTU or AMV, as well as a cluster of its nearest sequences in ARB (<97% similar by blast and within 0.02 tree distance units)
-`-i tree OTU results
-`-b blast results
-`-pt line number of your PT server
+- -i tree OTU results
+- -b blast results
+- -pt line number of your PT server
 
 
 ```
