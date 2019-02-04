@@ -3,7 +3,7 @@
 #### Protocol
 1.) Insert sequences into ARB tree.  Export Newick tree, using “name” as the branch IDs.  Delete all the stuff at the top of the file enclosed by brackets [].  Your sequence names must be shorter than 16 characters.
 
-2.) Run TreeOTU on Newick tree. Tree OTU can be downloaded from [https://github.com/dongyingwu/TreeOTU]
+2.) Run TreeOTU on Newick tree. TreeOTU can be downloaded from https://github.com/dongyingwu/TreeOTU
 
 ```
 perl TreeOTU.pl -i mytree.tree -c 0.02 -o treeotu_output.txt
