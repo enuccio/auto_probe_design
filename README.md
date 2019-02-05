@@ -23,14 +23,14 @@ blastn -db arb_database.db -query otus.fasta -outfmt '6' -max_target_seqs 2000 -
 4.) Build ARB PT server.  Note the line that the server is on for assign_otus_module.py
 
 
-5.) Generate ARB macro to design probes for each OTU or AMV, as well as a cluster of its nearest sequences in ARB (<97% similar by blast and within 0.02 tree distance units)
+5.) Generate ARB macro to design probes for each OTU or AMV, as well as a cluster of its nearest sequences in ARB (<97% similar by blast and within 0.02 tree distance units).  Macro template can be downloaded from this github project.
 - -i tree OTU results
 - -b blast results
 - -pt line number of your PT server
 
 
 ```
-python assign_otus_module.py -i treeotu_output.txt -b otu_blast_ARB.txt --pt 7
+python assign_otus_module.py -i treeotu_output.txt -b otu_blast_ARB.txt -t macro_template.amc --pt 7
 ```
 
 
