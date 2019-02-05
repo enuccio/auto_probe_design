@@ -1,5 +1,8 @@
 ## Automated probe design
 
+Note: This protocol works with the most recent version of ARB. Homebrew install: https://github.com/arb-project/homebrew-arb
+
+
 #### Protocol
 1.) Insert sequences into ARB tree.  Export Newick tree, using “name” as the branch IDs.  Delete all the stuff at the top of the file enclosed by brackets [].  Your sequence names must be shorter than 16 characters.
 
