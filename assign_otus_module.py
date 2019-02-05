@@ -87,14 +87,14 @@ def assign_otus(parsed_treeotu_filepath, blast_results_filepath):
     return outfile_otuid_path, outfile_path
 
 def create_macro(otu_id_filepath, mergelist_filepath, template_filepath):
-    template_path = template_filepath  ## UPDATE PATH TO THIS FILE!!!
+    template_path = template_filepath
     head, tail = split(otu_id_filepath)
     root, ext = splitext(tail)
     outfile_path = join(head, "create_probes_") + root + ".amc"
     outfh = open(outfile_path, "w")
 
     #print "Location of macro: "
-    print "Location of macro:", outfile_path
+    print outfile_path
     
     with open(template_path, "U") as fh:
         for line in fh:
@@ -123,14 +123,14 @@ def main():
 ###### Set-up command line prompts
 
 desc = "Parse TreeOTU results.  Combine TreeOTU and BLAST results, and generate AMC macro file for ARB (to assign OTUs to the cluster, only keep members of the TreeOTU that are 97% similar to the original sequence)"
-usage = "Specify input directory path (-i) and line number of the PT server. Output path is optional(-o).  Example: python assign_otus_module.py -i /Users/nuccio1/treeotu_results.txt --pt 7"
+usage = "Specify input directory path (-i), treeotu results, blast results, macro template, and line number of the PT server. Output path is optional(-o).  Example: python assign_otus_module.py -i treeotu_results.txt -b blast_results.txt -t macro_template.amc --pt 7"
 
 parser = OptionParser(usage=usage, description=desc)
 parser.set_defaults(verbose=True)
 options = [make_option('-i','--treeotu_fp',type="string", help='[REQUIRED] The TreeOTU results filepath. '),
            make_option('-b', '--blast_fp',type="string",help='[REQUIRED] The Blast output from blasting sequences against Silva database'),
            make_option('-p','--pt',type="int", help='[REQUIRED] The line number of the PT server.  Go to the PT Server admin and determine which line the server is on.'),
-           make_option('-t','--template_fp',type="string", help='[REQUIRED] The macro template filepath. '),
+           make_option('-t','--template_fp',type="string", help='[REQUIRED] The macro template filepath. ',
            make_option('-o','--output_fp',type="string", help='[OPTIONAL] The output filepath.  If not specified, will save to same folder as input.')]
 
 parser.add_options(options)
