@@ -33,8 +33,9 @@ python assign_otus_module.py -i treeotu_output.txt -b otu_blast_ARB.txt --pt 7
 
 6.) Run Macro to generate probe files for each OTU or AMV.
 
+```
 arb --execute otu_blast_ARB.amc arb_database.arb
-
+```
 
 
 
