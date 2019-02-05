@@ -1,6 +1,6 @@
 ## Automated probe design
 
-Note: This protocol works with the most recent version of ARB. Homebrew install: https://github.com/arb-project/homebrew-arb
+**Note: This protocol works with the most recent version of ARB.** Homebrew install ARB: https://github.com/arb-project/homebrew-arb
 
 
 #### Protocol
